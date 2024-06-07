@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Naslovna stranica";
+}
+
+<div class="text-center">
+    
+    <div style="display: flex;">
+        <input id="artkil-naziv-textbox" type="text">
+        <button class="btn-pretrazi" id="btn-artikl-pretraga">Pretraži artikle</button>
+    </div>
+
+    <table class="tablica-za-prikaz-podataka" id="artikli-tablica">
+        <thead>
+            <tr>
+                <th id="th-artikl-id">ID</th>
+                <th id="th-artikl">Artikl</th>
+                <th id="th-artikl-naziv">Naziv</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <hr />
+
+    <div class="daum-obracuna">
+        <span id="poslovna-jedinica">Poslovna jedinica:</span>
+        <input id="poslovna-jedinica-textbox" type="text">
+        <span id="datum-obracuna-od">Datum obračuna od:</span>
+        <input class="txt-datum-obracuna" type="date" id="obracun-od-datuma" placeholder="dd/mm/yyyy" />
+        <span id="datum-obracuna-do">do:</span>
+        <input class="txt-datum-obracuna" type="date" id="obracun-do-datuma" placeholder="dd/mm/yyyy" />
+        <label for="obracun-prometa-dropdown">Obračun prometa po:</label>
+        <select id="obracun-prometa-dropdown">
+            <option value="vrstaplacanja">Vrstama plaćanja</option>
+            <option value="artikli">Artiklima</option>
+        </select>
+        <button class="btn-pretrazi" id="btn-datum-obracuna-pretraga">Pretraži</button>
+    </div>
+
+    <table class="tablica-za-prikaz-podataka" id="datum-obracuna-tablica">
+        <thead>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+
+</div>
