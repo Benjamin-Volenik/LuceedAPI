@@ -75,9 +75,9 @@ document.getElementById("btn-datum-obracuna-pretraga").addEventListener("click",
         return;
     }
 
-    let url = getBaseUrl(obracunPrometaValue);
+    let url = "/api/obracuni";
 
-    url = url + poslovnaJedinica + "/" + datumObracunaOd;
+    url = url + "/" + obracunPrometaValue + "/" + poslovnaJedinica + "/" + datumObracunaOd;
 
     if (datumObracunaDo != "") {
         url = url + "/" + datumObracunaDo
@@ -114,18 +114,6 @@ document.getElementById("btn-datum-obracuna-pretraga").addEventListener("click",
             alert(error.message);
         });
 });
-
-function getBaseUrl(obracunPlacanjaValue) {
-    let url = "";
-
-    if (obracunPlacanjaValue == "vrstaplacanja") {
-        url = "/api/obracuni-placanja/";
-    } else if (obracunPlacanjaValue == "artikli") {
-        url = "/api/obracuni-artikli/";
-    }
-
-    return url;
-}
 
 function tableHeadSetUp(tHeadValue1, tHeadValue2, tHeadValue3, tHeadValue4, tHeadValue5) {
     // table head
