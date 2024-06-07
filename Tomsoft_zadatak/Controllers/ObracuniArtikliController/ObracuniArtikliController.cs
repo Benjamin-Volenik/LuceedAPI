@@ -18,7 +18,7 @@ public class ObracuniArtikliController : Controller
     }
 
     [HttpGet("{poslovnaJedinicaUid}/{datumOd}/{datumDo?}")]
-    public async Task<IActionResult> GetArticlesAsync(string poslovnaJedinicaUid, string datumOd, string? datumDo)
+    public async Task<IActionResult> GetAsync(string poslovnaJedinicaUid, string datumOd, string? datumDo)
     {
         DateTime DateFrom = DateTime.ParseExact(datumOd, "yyyy-MM-dd", null);
         string formattedDateFrom = DateFrom.ToString("d.M.yyyy");
