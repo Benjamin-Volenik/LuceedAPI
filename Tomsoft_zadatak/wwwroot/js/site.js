@@ -33,13 +33,13 @@
 
                     let articleCell = document.createElement("td");
                     articleCell.id = "td-artikl";
-                    idCell.className = "td-artikl";
+                    articleCell.className = "td-artikl";
                     articleCell.textContent = artikl.artikl;
                     row.appendChild(articleCell);
 
                     let nameCell = document.createElement("td");
                     nameCell.id = "td-artikl-naziv";
-                    idCell.className = "td-artikl";
+                    nameCell.className = "td-artikl";
                     nameCell.textContent = artikl.naziv;
                     row.appendChild(nameCell);
 
@@ -213,7 +213,7 @@ function tableBodySetUp(data, obracunPrometaValue) {
                     tbRow.appendChild(iznosCell);
 
                     let uslugaCell = document.createElement("td");
-                    uslugaCell.textContent = artikl.Usluga;
+                    uslugaCell.textContent = artikl.usluga;
                     tbRow.appendChild(uslugaCell);
 
                     tableBody.appendChild(tbRow);
